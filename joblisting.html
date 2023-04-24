@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="joblisting.css" />
+    <title>joblisting</title>
+  </head>
+  <body>
+    <div class="bgimg">
+      <div class="nav">
+        <h1>JobConnect</h1>
+        <img
+          src="https://img.freepik.com/free-icon/email_318-751945.jpg?size=626&ext=jpg&ga=GA1.1.1690504723.1682194246&semt=ais"
+          alt=""
+        />
+      </div>
+
+      <div class="header">
+        <h1>
+          Find your<br />
+          dream job !
+        </h1>
+        <div class="flex">
+          <button id="post-job">Post a Job</button>
+
+          <div class="searching">
+            <input
+              type="text"
+              id="searchjob"
+              placeholder="Search by job title"
+              onkeyup="search()"
+            />
+            <input
+              type="text"
+              id="timejob"
+              placeholder="parttime / fulltime"
+              onkeyup="time()"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <form id="post-form">
+      <div class="heading" id="heading">
+        <h1>POST A JOB</h1>
+        <button class="cross" onclick="close()">
+          <img
+            id="crossbtn"
+            src="https://img.icons8.com/ios/1x/multiply.png"
+            alt=""
+          />
+        </button>
+      </div>
+      <div class="formstyle">
+        Job title:<input
+          type="text"
+          id="text1"
+          required
+          placeholder="Job title"
+        />
+        Location:<input
+          type="text"
+          id="text2"
+          placeholder="Location"
+          required
+        />
+        Company Name:<input
+          type="text"
+          id="text3"
+          placeholder="Company Name"
+          required
+        />
+        Job Requirements:<input
+          type="text"
+          id="text4"
+          placeholder="Jon requirements"
+          required
+        />
+        Remote:<input
+          type="text"
+          id="text5"
+          placeholder="Remote / In-office"
+          required
+        />
+        Part time/Full time:<input
+          type="text"
+          id="text6"
+          placeholder="Part Time/Full Time"
+          required
+        />
+        Work involved:<input
+          type="text"
+          id="text7"
+          placeholder="Work involved"
+          required
+        />
+      </div>
+
+      <input type="button" id="postjob2" value="Post Job" />
+    </form>
+
+    <div id="alljoblists">
+      <div class="container" id="container">
+        
+        <ul class="job1" id="job1">
+          <li>
+            <h1>Backend Developer</h1>
+            <h2>Google</h2>
+          </li>
+
+          <li class="mid">
+            <button>Full Time</button>
+            <button class="remote">In-office</button>
+          </li>
+
+          <li>
+            <h2 style="color: #2557a7">Delhi,India</h2>
+          </li>
+
+          <div class="jobinfo" id="jobinfo">
+            <h3>Job Requirements</h3>
+            <p
+              style="
+                color: white;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+              "
+            >
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia
+              vel, quidem nobis consequatur veritatis consectetur asperiores
+              debitis tenetur illum saepe suscipit ad unde numquam totam
+              praesentium quaerat similique? Rem, veritatis!
+            </p>
+            <h3>Work involved</h3>
+            <p
+              style="
+                color: white;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+              "
+            >
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum,
+              magnam laborum incidunt similique, cupiditate reprehenderit
+              consequuntur nisi veritatis repellendus et modi tempore? Obcaecati
+              doloribus tempora ea, repellendus similique quasi vel!
+            </p>
+          </div>
+        </ul>
+
+        <hr />
+
+        <ul class="job2" id="job2">
+          <li>
+            <h1><u>Full Stack Developer</u></h1>
+            <h2>Uber</h2>
+          </li>
+
+          <li class="mid">
+            <button>Part Time</button>
+            <button class="remote">Remote</button>
+          </li>
+
+          <li>
+            <h2 style="color: #2557a7">Bengaluru</h2>
+          </li>
+
+          <div class="jobinfo2" id="jobinfo2">
+            <h3>Job Requirements</h3>
+            <p
+              style="
+                color: white;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+              "
+            >
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia
+              vel, quidem nobis consequatur veritatis consectetur asperiores
+              debitis tenetur illum saepe suscipit ad unde numquam totam
+              praesentium quaerat similique? Rem, veritatis!
+            </p>
+            <h3>Work involved</h3>
+            <p
+              style="
+                color: white;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+              "
+            >
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum,
+              magnam laborum incidunt similique, cupiditate reprehenderit
+              consequuntur nisi veritatis repellendus et modi tempore? Obcaecati
+              doloribus tempora ea, repellendus similique quasi vel!
+            </p>
+          </div>
+        </ul>
+
+        <hr />
+
+        <!----
+                
+               <button id="applyjob">Apply</button>
+
+               <div class="apply" id="apply">
+                   
+                   Full Name:<input type="text"required><br>
+                   Email:<input type="email"required><br>
+                   Phone:<input type="number"required><br>
+                   Upload Your Resume:<input type="file"><br>
+
+               </div>
+              -->
+      </div>
+    </div>
+
+    <script src="joblisting.js"></script>
+  </body>
+</html>
