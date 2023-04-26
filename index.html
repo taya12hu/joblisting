@@ -23,6 +23,7 @@
           dream job !
         </h1>
         <div class="flex">
+
           <button id="post-job">Post a Job</button>
 
           <div class="searching">
@@ -38,6 +39,18 @@
               placeholder="parttime / fulltime"
               onkeyup="time()"
             />
+            <input
+              type="text"
+              id="locationsearch"
+              placeholder="Enter any state"
+              onkeyup="locationstate()"
+            />
+            <input
+              type="text"
+              id="countrysearch"
+              placeholder="get country name"
+              onclick="myfinding()"
+            />
           </div>
         </div>
       </div>
@@ -46,13 +59,7 @@
     <form id="post-form">
       <div class="heading" id="heading">
         <h1>POST A JOB</h1>
-        <button class="cross" onclick="close()">
-          <img
-            id="crossbtn"
-            src="https://img.icons8.com/ios/1x/multiply.png"
-            alt=""
-          />
-        </button>
+        
       </div>
       <div class="formstyle">
         Job title:<input
@@ -76,7 +83,7 @@
         Job Requirements:<input
           type="text"
           id="text4"
-          placeholder="Jon requirements"
+          placeholder="Job requirements"
           required
         />
         Remote:<input
@@ -104,10 +111,9 @@
 
     <div id="alljoblists">
       <div class="container" id="container">
-        
         <ul class="job1" id="job1">
           <li>
-            <h1>Backend Developer</h1>
+            <h1>Web Developer</h1>
             <h2>Google</h2>
           </li>
 
@@ -117,7 +123,7 @@
           </li>
 
           <li>
-            <h2 style="color: #2557a7">Delhi,India</h2>
+            <h2 style="color: #2557a7">India</h2>
           </li>
 
           <div class="jobinfo" id="jobinfo">
@@ -128,10 +134,7 @@
                 font-family: Verdana, Geneva, Tahoma, sans-serif;
               "
             >
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia
-              vel, quidem nobis consequatur veritatis consectetur asperiores
-              debitis tenetur illum saepe suscipit ad unde numquam totam
-              praesentium quaerat similique? Rem, veritatis!
+            Proficient in HTML, CSS, JavaScript, and a server-side language such as PHP or Node.js. Experience with front-end frameworks like React or Angular is a plus.
             </p>
             <h3>Work involved</h3>
             <p
@@ -140,10 +143,7 @@
                 font-family: Verdana, Geneva, Tahoma, sans-serif;
               "
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum,
-              magnam laborum incidunt similique, cupiditate reprehenderit
-              consequuntur nisi veritatis repellendus et modi tempore? Obcaecati
-              doloribus tempora ea, repellendus similique quasi vel!
+            Design and develop websites and web applications.
             </p>
           </div>
         </ul>
@@ -152,7 +152,7 @@
 
         <ul class="job2" id="job2">
           <li>
-            <h1><u>Full Stack Developer</u></h1>
+            <h1>Graphic Designer</h1>
             <h2>Uber</h2>
           </li>
 
@@ -162,7 +162,7 @@
           </li>
 
           <li>
-            <h2 style="color: #2557a7">Bengaluru</h2>
+            <h2 style="color: #2557a7">Bangladesh</h2>
           </li>
 
           <div class="jobinfo2" id="jobinfo2">
@@ -173,10 +173,7 @@
                 font-family: Verdana, Geneva, Tahoma, sans-serif;
               "
             >
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia
-              vel, quidem nobis consequatur veritatis consectetur asperiores
-              debitis tenetur illum saepe suscipit ad unde numquam totam
-              praesentium quaerat similique? Rem, veritatis!
+            Proficient in Adobe Creative Suite or similar design software. Experience with branding and print design is a plus.
             </p>
             <h3>Work involved</h3>
             <p
@@ -185,10 +182,7 @@
                 font-family: Verdana, Geneva, Tahoma, sans-serif;
               "
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum,
-              magnam laborum incidunt similique, cupiditate reprehenderit
-              consequuntur nisi veritatis repellendus et modi tempore? Obcaecati
-              doloribus tempora ea, repellendus similique quasi vel!
+            Create visual concepts, using computer software or by hand, to communicate ideas that inspire, inform, and captivate consumers.
             </p>
           </div>
         </ul>
