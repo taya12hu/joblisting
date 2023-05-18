@@ -6,6 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="joblisting.css" />
     <title>joblisting</title>
+    <script>
+      function deleted(e){
+    let items = [];
+    JSON.parse(localStorage.getItem('items')).map(data=>{
+        if(data.id != e.parentElement.children[0].textContent){
+            
+            items.push(data);
+        }
+    });
+    localStorage.setItem('items',JSON.stringify(items));
+    window.location.reload();
+};
+    </script>
   </head>
   <body>
     <div class="bgimg">
@@ -53,8 +66,11 @@
             />
           </div>
         </div>
+
       </div>
     </div>
+
+   
 
     <form id="post-form">
       <div class="heading" id="heading">
@@ -62,11 +78,13 @@
         
       </div>
       <div class="formstyle">
-        Job title:<input
+        
+        <label for="text1" >Job title:</label>
+        <input
           type="text"
           id="text1"
-          required
           placeholder="Job title"
+          required
         />
         Location:<input
           type="text"
@@ -104,17 +122,30 @@
           placeholder="Work involved"
           required
         />
+
+        
       </div>
 
-      <input type="button" id="postjob2" value="Post Job" />
+      <input type="submit" id="postjob2" value="Post Job" onclick="posting()"/>
     </form>
+
+    <div class="browse_jobs">
+      <h1>Search for jobs</h1>
+      <div class="saved_jobs">
+        <h2 onclick="browse()">Browse all</h2>
+        <span id="savedd" onclick="scrollFunction()">Saved</span>
+      </div>
+    </div>
+
+
 
     <div id="alljoblists">
       <div class="container" id="container">
+
         <ul class="job1" id="job1">
           <li>
-            <h1>Web Developer</h1>
-            <h2>Google</h2>
+            <h1 class="job_title">Web Developer</h1>
+            <h2 class="company_name">Google</h2>
           </li>
 
           <li class="mid">
@@ -123,37 +154,43 @@
           </li>
 
           <li>
-            <h2 style="color: #2557a7">India</h2>
+            <h2 class="job_location"style="color: #2557a7">India</h2>
           </li>
 
+
           <div class="jobinfo" id="jobinfo">
-            <h3>Job Requirements</h3>
-            <p
-              style="
-                color: white;
-                font-family: Verdana, Geneva, Tahoma, sans-serif;
-              "
-            >
+           <div>
+            <h3>Job Requirements:</h3>
+            <p class="jobreq"
+              style=" color: white; font-family: Verdana, Geneva, Tahoma, sans-serif;">
             Proficient in HTML, CSS, JavaScript, and a server-side language such as PHP or Node.js. Experience with front-end frameworks like React or Angular is a plus.
             </p>
-            <h3>Work involved</h3>
-            <p
-              style="
-                color: white;
-                font-family: Verdana, Geneva, Tahoma, sans-serif;
-              "
-            >
+          </div>
+
+          <div>
+            <h3>Work involved:</h3>
+            <p class="workinv"
+              style="color: white;font-family: Verdana, Geneva, Tahoma, sans-serif;">
             Design and develop websites and web applications.
             </p>
           </div>
+
+            <li class="save_button">
+              <button class="savesurjob">Save</button>
+              <button onclick="apply_button()">Apply</button>
+            </li>
+  
+          </div>
+
+
         </ul>
 
-        <hr />
+        
 
         <ul class="job2" id="job2">
           <li>
-            <h1>Graphic Designer</h1>
-            <h2>Uber</h2>
+            <h1 class="job_title">Graphic Designer</h1>
+            <h2 class="company_name">Uber</h2>
           </li>
 
           <li class="mid">
@@ -162,49 +199,275 @@
           </li>
 
           <li>
-            <h2 style="color: #2557a7">Bangladesh</h2>
+            <h2 class="job_location"style="color: #2557a7">Bangladesh</h2>
           </li>
 
           <div class="jobinfo2" id="jobinfo2">
-            <h3>Job Requirements</h3>
-            <p
-              style="
-                color: white;
-                font-family: Verdana, Geneva, Tahoma, sans-serif;
-              "
-            >
+
+            <div>
+            <h3>Job Requirements:</h3>
+            <p class="jobreq"
+              style="color: white;font-family: Verdana, Geneva, Tahoma, sans-serif;" >
             Proficient in Adobe Creative Suite or similar design software. Experience with branding and print design is a plus.
             </p>
-            <h3>Work involved</h3>
-            <p
-              style="
-                color: white;
-                font-family: Verdana, Geneva, Tahoma, sans-serif;
-              "
+          </div>
+
+          <div>
+            <h3>Work involved:</h3>
+            <p class="workinv"
+              style="color: white;font-family: Verdana, Geneva, Tahoma, sans-serif;"
             >
             Create visual concepts, using computer software or by hand, to communicate ideas that inspire, inform, and captivate consumers.
             </p>
           </div>
+
+            <li class="save_button">
+              <button class="savesurjob">Save</button>
+              <button onclick="apply_button()">Apply</button>
+            </li>
+
+
+          </div>
         </ul>
 
-        <hr />
+        
 
-        <!----
-                
-               <button id="applyjob">Apply</button>
 
-               <div class="apply" id="apply">
-                   
-                   Full Name:<input type="text"required><br>
-                   Email:<input type="email"required><br>
-                   Phone:<input type="number"required><br>
-                   Upload Your Resume:<input type="file"><br>
 
-               </div>
-              -->
+        <ul class="job2" id="job2">
+          <li>
+            <h1 class="job_title">App Developer</h1>
+            <h2 class="company_name">Spenny</h2>
+          </li>
+
+          <li class="mid">
+            <button>Part Time</button>
+            <button class="remote">Remote</button>
+          </li>
+
+          <li>
+            <h2 class="job_location"style="color: #2557a7">Albania</h2>
+          </li>
+
+          <div class="jobinfo2" id="jobinfo2">
+
+            <div>
+            <h3>Job Requirements:</h3>
+            <p class="jobreq"style="color: white;font-family: Verdana, Geneva, Tahoma, sans-serif;">
+            Proficient in Adobe Creative Suite or similar design software. Experience with branding and print design is a plus.
+            </p>
+           </div>
+
+           <div>
+            <h3>Work involved:</h3>
+            <p class="workinv"
+              style="color: white;font-family: Verdana, Geneva, Tahoma, sans-serif;"
+            >
+            Create visual concepts, using computer software or by hand, to communicate ideas that inspire, inform, and captivate consumers.
+            </p>
+          </div>
+
+            <li class="save_button">
+              <button class="savesurjob">Save</button>
+              <button onclick="apply_button()">Apply</button>
+            </li>
+
+          </div>
+        </ul>
+
+
+
+
+
+
+        <ul class="job2" id="job2">
+          <li>
+            <h1 class="job_title">Quantitative Analyst</h1>
+            <h2 class="company_name">Zerodha</h2>
+          </li>
+
+          <li class="mid">
+            <button>Full Time</button>
+            <button class="remote">In-office</button>
+          </li>
+
+          <li>
+            <h2 class="job_location"style="color: #2557a7">Morocco</h2>
+          </li>
+
+          <div class="jobinfo2" id="jobinfo2">
+            <div>
+            <h3>Job Requirements:</h3>
+            <p class="jobreq"style="color: white;font-family: Verdana, Geneva, Tahoma, sans-serif; ">
+            Proficient in Adobe Creative Suite or similar design software. Experience with branding and print design is a plus.
+            </p>
+            </div>
+
+            <div>
+            <h3>Work involved:</h3>
+            <p class="workinv"
+              style="color: white;font-family: Verdana, Geneva, Tahoma, sans-serif; " >
+            Create visual concepts, using computer software or by hand, to communicate ideas that inspire, inform, and captivate consumers.
+            </p>
+          </div>
+
+            <li class="save_button">
+              <button class="savesurjob">Save</button>
+              <button onclick="apply_button()">Apply</button>
+            </li>
+
+
+          </div>
+        </ul>
+
+
+
+
+
+
+        <ul class="job2" id="job2">
+          <li>
+            <h1 class="job_title">Blockchain Developer</h1>
+            <h2 class="company_name">SmallBlu</h2>
+          </li>
+
+          <li class="mid">
+            <button>Part Time</button>
+            <button class="remote">Remote</button>
+          </li>
+
+          <li>
+            <h2 class="job_location"style="color: #2557a7">India</h2>
+          </li>
+
+          <div class="jobinfo2" id="jobinfo2">
+
+            <div>
+            <h3>Job Requirements:</h3>
+            <p class="jobreq"style=" color: white; font-family: Verdana, Geneva, Tahoma, sans-serif;">
+            Proficient in Adobe Creative Suite or similar design software. Experience with branding and print design is a plus.
+            </p>
+            </div>
+
+            <div>
+            <h3>Work involved:</h3>
+            <p class="workinv"style="color: white;font-family: Verdana, Geneva, Tahoma, sans-serif;">
+            Create visual concepts, using computer software or by hand, to communicate ideas that inspire, inform, and captivate consumers.
+            </p>
+           </div>
+
+            <li class="save_button">
+              <button class="savesurjob">Save</button>
+              <button onclick="apply_button()">Apply</button>
+            </li>
+
+
+          </div>
+        </ul>
+
+
+
+
+
+
+        <ul class="job2" id="job2">
+          <li>
+            <h1 class="job_title">Data Scientist</h1>
+            <h2 class="company_name">IBM</h2>
+          </li>
+
+          <li class="mid">
+            <button>Full Time</button>
+            <button class="remote">Remote</button>
+          </li>
+
+          <li>
+            <h2 class="job_location"style="color: #2557a7">Afhganistan</h2>
+          </li>
+
+          <div class="jobinfo2" id="jobinfo2">
+
+            <div>
+            <h3>Job Requirements:</h3>
+            <p class="jobreq"style="color: white;font-family: Verdana, Geneva, Tahoma, sans-serif; ">
+            Proficient in Adobe Creative Suite or similar design software. Experience with branding and print design is a plus.
+            </p>
+          </div>
+
+          <div>
+            <h3>Work involved:</h3>
+            <p class="workinv"style="color: white;font-family: Verdana, Geneva, Tahoma, sans-serif;">
+            Create visual concepts, using computer software or by hand, to communicate ideas that inspire, inform, and captivate consumers.
+            </p>
+          </div>
+
+            <li class="save_button">
+              <button class="savesurjob">Save</button>
+              <button onclick="apply_button()">Apply</button>
+            </li>
+
+
+          </div>
+        </ul>
+
+
+
+
+
+
+        <ul class="job2" id="job2">
+          <li>
+            <h1 class="job_title">Product Manager</h1>
+            <h2 class="company_name">Zetwerk</h2>
+          </li>
+
+          <li class="mid">
+            <button>Full Time</button>
+            <button class="remote">In-office</button>
+          </li>
+
+          <li>
+            <h2 class="job_location"style="color: #2557a7">United Kingdom</h2>
+          </li>
+
+          <div class="jobinfo2" id="jobinfo2">
+
+            <div>
+            <h3>Job Requirements:</h3>
+            <p class="jobreq"style="color: white;font-family: Verdana, Geneva, Tahoma, sans-serif;">
+            Proficient in Adobe Creative Suite or similar design software. Experience with branding and print design is a plus.
+            </p>
+           </div>
+
+          <div>
+            <h3>Work involved:</h3>
+            <p class="workinv"style="color: white;font-family: Verdana, Geneva, Tahoma, sans-serif;">
+            Create visual concepts, using computer software or by hand, to communicate ideas that inspire, inform, and captivate consumers.
+            </p>
+          </div>
+
+            <li class="save_button">
+              <button class="savesurjob">Save</button>
+              <button onclick="apply_button()">Apply</button>
+            </li>
+
+          </div>
+        </ul>
+              
+              
       </div>
     </div>
 
-    <script src="joblisting.js"></script>
+
+
+
+<div class="jobssave">
+<hr>
+  <h1 style="padding-left:40vw;">SAVED JOBS</h1>
+  <hr>
+</div>
+    <script src="joblisting.js">
+
+    </script>
   </body>
 </html>
