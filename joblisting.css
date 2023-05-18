@@ -45,6 +45,17 @@
   text-align: center;
 }
 
+.jobssave{
+  color: white;
+  padding-top: 4vh;
+
+
+}
+
+.jobssave h1{
+  align-items: center;
+}
+
 #timejob {
   height: 8vh;
   background-color: white;
@@ -139,6 +150,11 @@ body {
 
 .container h2 {
   color: #3eb2fd;
+}
+
+.job1,.job2{
+  border:2px solid grey;
+  border-radius: 25px;
 }
 
 .job1 h2,
@@ -253,10 +269,13 @@ input {
 .container ul {
   list-style-type: none;
   display: grid;
-  grid-template-columns: 40% 30% 30%;
+  grid-template-columns: 40% 30% 30% ;
 }
 
-.mid button {
+.save_button{
+  padding-bottom: 3vh;
+}
+.mid button,.save_button button {
   margin-top: 20px;
   background-color: #2557a7;
   border-radius: 100px;
@@ -324,6 +343,49 @@ input {
 .formstyle {
   font-family: "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
     sans-serif;
+}
+
+.saved_jobs{
+  display: flex;
+  gap:2vw;
+}
+
+.saved_jobs h2,#savedd{
+  font-family: Graphik,Helvetica Neue,arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color:white;
+  font-weight: 400;
+ 
+}
+
+.saved_jobs h2{
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.saved_jobs h2:hover{
+  text-decoration: underline;
+  cursor: pointer;
+  color: gray;
+}
+
+#savedd:hover{
+  text-decoration: underline;
+  cursor: pointer;
+  color: gray;
+}
+
+.browse_jobs{
+  margin-left: 3vw;;
+}
+
+.browse_jobs h1{
+  font-family: Graphik,Helvetica Neue,arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+  font-weight: 500;
+  line-height: 1.5;
+  font-size: 2rem;
+  color: white;
 }
 
 @media (max-width: 955px) {
