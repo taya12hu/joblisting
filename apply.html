@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>apply</title>
+</head>
+<style>
+
+    body{
+       
+        background-color: black;
+        color: white;
+    }
+    #apply_form{
+        
+        font-family: "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+        padding-top: 30px;
+        padding-left: 20px;
+        font-family: CircularStd, sans-serif;
+        font-size: 1.3rem;
+        font-weight: 100;
+        margin-left: 23vw;
+        margin-top: 10vh;
+    
+    }
+
+    input{   
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 40%;
+    border-radius: 25px;
+    border: 1px solid grey;
+    background-color: lightgray;
+    color: black;
+    line-height: 1.5;
+    }
+
+    #apply_job{
+        margin-top: 20px;
+    background-color: #2557a7;
+    border-radius: 100px;
+    border-width: 0;
+    box-shadow: none;
+    color: white;
+    display: inline-flex;
+    font-family: CircularStd, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 6px 20px;
+    margin-right: 10px;
+    width:10%;
+    text-align: center;
+    align-items: center;
+    margin-left: 12vw;
+    }
+
+    #apply_job hover:{
+        background-color: red;
+    }
+</style>
+<body>
+    <form id="apply_form">
+        Full Name:<input type="text"required><br>
+        Email:<input type="email"required><br>
+        Phone:<input type="number"required><br>
+        Upload Your Resume:<input type="file"required><br>
+        <input id="apply_job"type="submit"value="Apply"onclick="alerts()"><br>
+    </form>
+
+    <script>
+        function alerts(){
+            alert("you have successfully applied for this job");
+            console.log("applied");
+        }
+    </script>
+</body>
+
+</html>
