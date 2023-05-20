@@ -270,6 +270,7 @@ function locationstate(){
                 return null;
             }
 })
+   myfinding();
 }
 
 
@@ -278,6 +279,7 @@ document.getElementById("countrysearch").addEventListener("input",myfinding);
      function myfinding()
  {   
     let alljoblists=document.getElementById('alljoblists');
+    let countryvalue=document.getElementById("countrysearch");
     let ul=alljoblists.getElementsByTagName('ul');
     let countryupper=countryvalue.value.toUpperCase();
     
